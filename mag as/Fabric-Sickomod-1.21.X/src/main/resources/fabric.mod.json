@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "sickomod",
+	"version": "${version}",
+	"name": "Sicko Mod",
+	"description": "Firma Going Crazy!!!",
+	"authors": [
+		"vn.romann"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/sickomod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.travis.sickomod.SickoMod"
+		],
+		"client": [
+			"net.travis.sickomod.SickoModClient"
+		],
+		"fabric-datagen": [
+			"net.travis.sickomod.SickoModDataGenerator"
+		]
+	},
+	"mixins": [
+		"sickomod.mixins.json",
+		{
+			"config": "sickomod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
